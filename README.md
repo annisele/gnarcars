@@ -11,4 +11,5 @@ You should see a Symfony 2 page.  Congratulations!
 
 #hacktech
 
-////  df
+.htaccess should read:
+https://gist.github.com/clay-to-n/bb1f6a721a690dcda449
