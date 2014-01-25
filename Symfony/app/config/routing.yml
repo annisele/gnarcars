@@ -16,8 +16,8 @@ sign_in:
 
 results:
     path:     /results/
-    defaults { _controller: HacktechGnarCarBundle:Default:search }
+    defaults: { _controller: HacktechGnarCarBundle:Default:search }
 
 join_car:
     path:     /join_car/
-    defaults { _controller: HacktechGnarCarBundle:Default:form }
+    defaults: { _controller: HacktechGnarCarBundle:Default:form }
