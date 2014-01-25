@@ -13,3 +13,11 @@ hello:
 sign_in:
     path:     /sign_in/
     defaults: { _controller: HacktechGnarCarBundle:Default:login }
+
+results:
+    path:     /results/
+    defaults { _controller: HacktechGnarCarBundle:Default:search }
+
+join_car:
+    path:     /join_car/
+    defaults { _controller: HacktechGnarCarBundle:Default:form }

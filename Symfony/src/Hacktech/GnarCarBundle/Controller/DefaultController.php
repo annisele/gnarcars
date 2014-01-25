@@ -17,13 +17,13 @@ class DefaultController extends Controller
     	return $this->render('HacktechGnarCarBundle:Default:login.html.twig', array());
     }
 
-    public function resultsAction()
+    public function searchAction()
     {
-    	return $this->render('HacktechGnarCarBundle:Default:results.html.twig', array());
+    	return $this->render('HacktechGnarCarBundle:Default:search.html.twig', array());
     }
 
-    public function joinTripAction()
+    public function formAction()
     {
-    	return $this->render('HacktechGnarCarBundle:Default:join_trip.html.twig', array());
+    	return $this->render('HacktechGnarCarBundle:Default:form.html.twig', array());
     }
 }
