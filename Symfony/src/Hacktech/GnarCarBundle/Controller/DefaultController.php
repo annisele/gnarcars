@@ -14,6 +14,6 @@ class DefaultController extends Controller
 
     public function loginAction()
     {
-    	return $this->render('HacktechGnarCarBundle:Default:login.html.twig', array('name' => $name));
+    	return $this->render('HacktechGnarCarBundle:Default:login.html.twig', array());
     }
 }
