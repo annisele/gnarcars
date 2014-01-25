@@ -1,3 +1,7 @@
 hacktech_gnar_car_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: HacktechGnarCarBundle:Default:index }
+    
+hello:
+    path:     /hello/{name}
+    defaults: { _controller: HacktechGnarCarBundle:Default:index }
