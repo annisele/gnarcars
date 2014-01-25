@@ -7,7 +7,7 @@
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
 
-		<!-- Latest compiled and minified JavaScript -->
+		<!-- Latest compiled and minified JavaScript #0D9AD6; -->
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
 
@@ -15,12 +15,55 @@
 
         <style type="text/css">
 
+            .btn-shift-left{
+                float: left;
+                margin-right: -15px;
+                margin-top: 12px;
+                margin-bottom: 12px;
+            }
+
+            .navbar-brand{
+                font-size: 56px;
+                
+                float: left;
+            }
+
+
+
         </style>
+
+
+
 
 		
         <title>{% block title %}Test Application{% endblock %}</title>
     </head>
     <body>
+
+            {% block navbar %}
+            <nav class="navbar navbar-default" role="navigation">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">GnarCar</a>
+              </div>
+                  
+                </form>
+
+                <ul class="nav navbar-nav navbar-right">
+                  <button type="submit" class="btn btn-default btn-shift-left">Log In</button>
+                </ul>
+              </div>
+            </nav>
+            {% endblock %}
+
+
+
         <div id="sidebar">
             {% block sidebar %}
                 <ul>
