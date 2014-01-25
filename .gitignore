@@ -13,6 +13,7 @@
 *.tmp
 *.bak
 *Symfony/app/cache/*
+*Symfony/app/cache/dev/*
 
 # OS generated files
 Thumbs.db
