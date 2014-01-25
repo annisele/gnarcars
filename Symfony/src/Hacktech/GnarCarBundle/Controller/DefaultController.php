@@ -11,4 +11,9 @@ class DefaultController extends Controller
     	// this returns a view file found in our Resources/views
         return $this->render('HacktechGnarCarBundle:Default:index.html.twig', array('name' => $name));
     }
+
+    public function loginAction()
+    {
+    	return $this->render('HacktechGnarCarBundle:Default:login.html.twig', array('name' => $name));
+    }
 }

@@ -9,3 +9,7 @@ acme_hello:
 hello:
     path:     /hello/{name}
     defaults: { _controller: HacktechGnarCarBundle:Default:index }
+
+sign_in:
+    path:     /sign_in/
+    defaults: { _controller: HacktechGnarCarBundle:Default:login }
