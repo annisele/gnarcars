@@ -28,15 +28,20 @@
 
     <div class="container">
 
-      <form class="form-signin" role="form">
+      <form class="form-signin" role="form" action="{{ path('sign_in') }}"  method="post">
         <h4 class="form-signin-heading">If you haven't already done so,<br>click to log in or create an account below</h4>
         <h5 class="form-signin-heading">(You will be directed back to this page when you're done)</h5>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Log In/Create Account</button>
-      </form>
-
-      <form class="form-signin" role="form">
+        <a href="{{ path('welcome') }}"><button class="btn btn-lg btn-primary btn-block" type="submit">Log In/Create Account</button></a>
+      
         <h2 class="form-signin-heading">Join Event</h2>
-        </form>
+
+        <form action="" class="drive-or-ride">
+        <select name="drive/ride">
+        <option value="choose">I will be a [choose one]</option>
+        <option value="driver">Driver</option>
+        <option value="passenger">Passenger</option>
+        </select>
+      </form>
 
 
             <ul class="nav drive-and-ride">

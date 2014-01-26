@@ -133,9 +133,49 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // hello
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'hello')), array (  '_controller' => 'Acme\\HelloBundle\\Controller\\HelloController::indexAction',));
+        if (0 === strpos($pathinfo, '/hello')) {
+            // hacktech_gnar_car_homepage
+            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'hacktech_gnar_car_homepage')), array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::indexAction',));
+            }
+
+            // hello
+            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'hello')), array (  '_controller' => 'Acme\\HelloBundle\\Controller\\HelloController::indexAction',));
+            }
+
+        }
+
+        // welcome
+        if (rtrim($pathinfo, '/') === '/welcome') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'welcome');
+            }
+
+            return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::indexAction',  '_route' => 'welcome',);
+        }
+
+        // sign_in
+        if (rtrim($pathinfo, '/') === '/sign_in') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'sign_in');
+            }
+
+            return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::loginAction',  '_route' => 'sign_in',);
+        }
+
+        // results
+        if (rtrim($pathinfo, '/') === '/results') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'results');
+            }
+
+            return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::searchAction',  '_route' => 'results',);
+        }
+
+        // join_car
+        if ($pathinfo === '/sign_in/reg') {
+            return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::registerAction',  '_route' => 'join_car',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
