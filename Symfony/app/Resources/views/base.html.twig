@@ -60,6 +60,17 @@
                 margin-left: 20px;
             }
 
+            .form-control{
+              margin-bottom: 5px;
+              height: 40px;
+            }
+
+            .search-btn{
+              width:150px;
+              float: left;
+              margin-left: 25px;
+            }
+
 
 
         </style>
@@ -94,7 +105,9 @@
        
         <div id="sidebar">
             {% block sidebar %}
-   
+
+                <h2><font color="white" align="center" background-color="A0A0A0"><b>&nbsp;Event Search</h2></font>
+
                  <input type="text" class="form-control" placeholder="Event Name" required="" autofocus="">
               
                  <input type="text" class="form-control" placeholder="Date (mm/dd/yyyy)" required="" autofocus="">
@@ -105,7 +118,7 @@
                 
                  <input type="text" class="form-control" placeholder="User" required="" autofocus="">
 
-                 <a href="{{ path('join_car') }}"><button type="submit" class="btn btn-default search-btn">Search</button></a>
+                 <a href="{{ path('results') }}"><button type="submit" class="btn btn-default search-btn"><b>Go</button></a>
   
             {% endblock %}
         </div>
