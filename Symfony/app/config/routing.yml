@@ -29,3 +29,7 @@ register:
 logging_in:
     path:     /sign_in/login
     defaults: { _controller: HacktechGnarCarBundle:Default:logging_in }
+
+confirmation:
+    path:     /confirmation/
+    defaults: { _controller: HacktechGnarCarBundle:Default:thank_you}

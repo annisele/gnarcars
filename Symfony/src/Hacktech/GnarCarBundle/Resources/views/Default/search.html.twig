@@ -29,12 +29,13 @@
         }
 
         .bandPic {
-        	color: solid black;
-        	background-color: solid black;
-        	margin: 10px;
+        	background-image:url('http://static.stereoboard.com/images/artistimages/50/tn_arcade-fire.jpg');
         	padding: 2px;
-        	height: 30px;
-        	width: 30px;
+        	border: 2px;
+        	border-width: 4px;
+        	border-color: black;
+        	height: 50px;
+        	width: 50px;
         	float: left;
         }
 
@@ -56,6 +57,16 @@
           text-align: center;
         }
 
+        .btn-block {
+        	float: right;
+        	padding: 4px;
+        	font-size: 12px;
+        	width: 80px;
+        	height: 34px;
+
+
+        }
+
         </style>
 
   <body>
@@ -63,20 +74,68 @@
 <div class="container">
 
       <div class="card">
-]      	<div class="bandPic">
+      	<div class="bandPic">
       		<br/>
       	</div>
       	<div class="bandTitle">
-      		<b>Le Arcade Fires</b><br/>
-      		<font size="2">11/12/14 The Echoplex</font>
+      		<b>Arcade Fire</b><br/>
+      		<font size="2">11/12/13 The Echoplex</font>
       	</div>
+      	<form id = "some_form" method="post" action="{{ path('join_car') }}">
+	      	<div class="bandDetails">
+	      		<br/>San Diego  -------->  Los Angeles
+	      	
+	      		<button class="btn btn-lg btn-primary btn-block" action="{{ path('join_car') }}" type="submit"> Join 
+	      		</button>
+	      	
+	      		<br/>
+	      		12 want to go  --------  4 open seats  
+	      		 
+	      		 <br/>
+	      	</div>
+      	</form>
+      </div>
 
-      	<div class="bandDetails">
-      		San Diego  ------------>  Los Angeles<br/>
-      		12 want to go              4 open seats<br/>
+  
+
+      <div class="card">
+      	<div class="bandPic">
+      		<br/>
       	</div>
+      	<div class="bandTitle">
+      		<b>Arcade Fire</b><br/>
+      		<font size="2">11/14/13 The Metropolis Theater</font>
+      	</div>
+      	<form id = "some_form" method="post" action="{{ path('join_car') }}">
 
+	      	<div class="bandDetails">
+	      		<br/>Santa Barbara  -------->  San Francisco
+	      		<button action = "{{ path('join_car') }}" class="btn btn-lg btn-primary btn-block" type="submit">Join</button><br/>
+	      		8 want to go  --------  0 open seats  
+	      		 
+	      		 <br/>
+	      	</div>
+	    </form>
+      </div>
 
+      <div class="card">
+      	<div class="bandPic">
+      		<br/>
+      	</div>
+      	<div class="bandTitle">
+      		<b>Arcade Fire</b><br/>
+      		<font size="2">11/15/14 The Echoplex</font>
+      	</div>
+		<form id = "some_form" method="post" action="{{ path('join_car') }}">
+	      	<div class="bandDetails">
+	      		<br/>San Francisco  -------->  Seattle
+	      		<button action = "{{ path('join_car') }}" class="btn btn-lg btn-primary btn-block" type="submit">Join</button><br/>
+	      		2 want to go  --------  1 open seats  
+	      		 
+	      		 <br/>
+	      	</div>
+	    </form>
+      </div>
 
 </div> <!-- /container -->
 

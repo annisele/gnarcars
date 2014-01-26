@@ -20,6 +20,11 @@ class DefaultController extends Controller
     	return $this->render('HacktechGnarCarBundle:Default:login.html.twig', array());
     }
 
+    public function thank_youAction()
+    {
+    	return $this->render('HacktechGnarCarBundle:Default:thank_you.html.twig', array());
+    }
+
     public function searchAction()
     {
     	return $this->render('HacktechGnarCarBundle:Default:search.html.twig', array());

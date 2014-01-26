@@ -6,6 +6,7 @@
 
         .container{
             width:400px;
+            height:350px;
             background-color: lightgray;
             border-radius: 12px;
             margin-bottom: 20px;
@@ -26,6 +27,14 @@
             text-align:center;
         }
 
+        .text-box{
+          width: 50px;
+          height: 40px;
+          float: center;
+          text-align: center;
+          margin-left: 40%;
+        }
+
         </style>
 
   <body>
@@ -33,12 +42,14 @@
     <div class="container">
 
       <form class="form-signin" role="form" action="{{ path('sign_in') }}"  method="post">
-        <h4 class="form-signin-heading">Log in or create an account first!</h4>
+        <h4 class="form-signin-heading">1. Log in or create an account first!</h4>
         <h5 class="form-signin-heading">(You'll be back here afterwards)</h5>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Log In/Create Account</button>
       
-        <h2 class="form-signin-heading">Join Event</h2>
-<!--
+      </form>
+
+       <!--
+ <h2 class="form-signin-heading">Join Event</h2>
         <form action="" class="drive-or-ride">
         <select name="drive/ride">
         <option value="choose">I will be a [choose one]</option>
@@ -46,7 +57,7 @@
         <option value="passenger">Passenger</option>
         </select>
       </form>
--->
+
 
             <ul class="nav drive-and-ride">
             <li class="dropdown open">
@@ -57,6 +68,15 @@
               </ul>
             </li>
           </ul>
+          -->
+
+        <form class="form-signin" role="form" method="post" action="{{ path('confirmation') }}"> 
+
+          <h4 class="form-signin-heading">2. # spots in your car?</h4>
+          <h5 class="form-signin-heading">(Passengers put 0)</h5>
+          <input type="text" class="form-control text-box form-signin-heading" placeholder="" required="" autofocus="">
+          <button class="btn btn-lg btn-primary btn-block" action="{{ path('confirmation') }}"  type="submit2">Join Event</button>
+        </form>
 
 <!--
         <input type="text" class="form-control" placeholder="Username" required="" autofocus="">
@@ -64,7 +84,7 @@
         <input type="password" class="form-control" placeholder="Password" required=""><br>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button> -->
 
-      </form>
+      
 
     </div>
 

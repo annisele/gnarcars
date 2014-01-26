@@ -1,0 +1,37 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+<html lang="en">
+
+	<style type="text/css">
+		.form-signin-heading{
+			color:#ffffff;
+			font-size: 50px;
+			border-radius: 12px;
+			margin-top: 120px;
+			margin-left: 360px;
+			text-align: center;
+			text-shadow: 2px 3px 2px #101010;
+      		max-width: 600px;
+		}
+
+		.form-signin-followup{
+			color:#ffffff;
+			font-size: 30px;
+			border-radius: 12px;
+			margin-left: 360px;
+			text-align: center;
+			text-shadow: 2px 3px 2px #101010;
+      		max-width: 600px;
+		}
+
+	</style>
+
+<div class="form-signin-heading">
+	Thank you for joining the event!
+</div>
+<div class="form-signin-followup">
+	<br/>
+	You will receive an email when a driver is available.
+</div>
+</html>
+{% endblock %}
