@@ -12,9 +12,14 @@
           text-align: center;
         }
 
-        .drive-or-ride{
-          width:400px;
+        .drive-and-ride{
+          width:370px;
           text-align:center;
+        }
+
+        .dropdown-menu{
+            width:370px;
+            text-align:center;
         }
 
         </style>
@@ -31,30 +36,18 @@
 
       <form class="form-signin" role="form">
         <h2 class="form-signin-heading">Join Event</h2>
-
-        <form action="" class="drive-or-ride">
-        <select name="drive/ride">
-        <option value="choose">I will be a [choose one]</option>
-        <option value="driver">Driver</option>
-        <option value="passenger">Passenger</option>
-        </select>
         </form>
 
 
-        <!--
-        <div class="dropdown theme-dropdown clearfix">
-        <a id="dropdownMenu1" href="#" role="button" class="sr-only dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-          <li class="active" role="presentation"><a role="menuitem" tabindex="-1" href="#">I am a [choose one]</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Driver</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Passenger</a></li>
-          <li role="presentation" class="divider"></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-        </ul>
-      </div>
-
--->
-
+            <ul class="nav drive-and-ride">
+            <li class="dropdown open">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">I will be a [choose one]<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Driver</a></li>
+                <li><a href="#">Passenger</a></li>
+              </ul>
+            </li>
+          </ul>
 
 <!--
         <input type="text" class="form-control" placeholder="Username" required="" autofocus="">
