@@ -174,8 +174,25 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // join_car
-        if ($pathinfo === '/sign_in/reg') {
-            return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::registerAction',  '_route' => 'join_car',);
+        if (rtrim($pathinfo, '/') === '/join_car') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'join_car');
+            }
+
+            return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::formAction',  '_route' => 'join_car',);
+        }
+
+        if (0 === strpos($pathinfo, '/sign_in')) {
+            // register
+            if ($pathinfo === '/sign_in/reg') {
+                return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::registerAction',  '_route' => 'register',);
+            }
+
+            // logging_in
+            if ($pathinfo === '/sign_in/login') {
+                return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::loggin_inAction',  '_route' => 'logging_in',);
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

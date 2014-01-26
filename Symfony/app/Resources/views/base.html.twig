@@ -32,7 +32,7 @@
                 margin-left: 60px;
                 margin-top: 10px;
             }
-
+    
             .navbar-damn {
               margin-right: 10px;
               min-width: 100px;
@@ -42,12 +42,15 @@
 
             .navbar-header2 {
               min-width: 320px;
+
+
             }
             .navbar-brand { 
                 font-size: 56px;
                 margin-top: 20px;
                 margin-bottom: 20px;
                 float: left;
+
             }
             .navbar-default {
                 max-height: 93px;
@@ -55,9 +58,11 @@
             }
 
             #sidebar{
+                top: 120px;
                 width:200px;
                 float: left;
                 margin-left: 20px;
+                  position: fixed;
             }
 
             .form-control{
@@ -85,7 +90,7 @@
           body {
           background-image:url('http://i.imgur.com/EikJfFY.jpg');
           background-repeat:no-repeat;
-          /*background-position: 300px;*/
+          background-position: fixed;
           background-origin: center;
           background-size: 1400px;
           height: 770px;
@@ -148,7 +153,9 @@
         
 
         <div id="content">
-            {% block body %}{% endblock %}
+            {% block body %}
+
+            {% endblock %}
         </div>
     </body>
 </html>

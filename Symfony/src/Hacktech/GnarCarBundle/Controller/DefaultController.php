@@ -1,8 +1,11 @@
 <?php
 
+
 namespace Hacktech\GnarCarBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+ require_once('Flex.php');
 
 class DefaultController extends Controller
 {
@@ -28,9 +31,33 @@ class DefaultController extends Controller
     }
 
      public function registerAction()
-    {   echo $_POST['username'];
-echo $_POST['email'];
-echo $_POST['password'];
-        return $this->render('HacktechGnarCarBundle:Default:register.html.twig', array());
+    {    
+
+     $user = new \uFlex(false);
+
+ $user->db['user'] = "root";
+    $user->db['pass'] = "";
+    $user->db['name'] = "all_users";
+        $user->start();
+        echo $_POST['username'];
+
+
+if(count($_POST)){
+        //Register User
+       if($user->register($_POST)!=false){
+
+        echo json_encode(array(
+           
+            'Confirm'  => "User Registered Successfully. You may login now!",
+            
+        ));
+    }else{
+        echo json_encode(array(
+     'Sorry:'  => "User not Registered.",
+      ));
+               
+    }
+        return $this->render('HacktechGnarCarBundle:Default:index.html.twig', array());
+    }
     }
 }

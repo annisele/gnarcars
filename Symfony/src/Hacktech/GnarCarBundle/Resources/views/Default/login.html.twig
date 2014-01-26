@@ -8,6 +8,7 @@
           background-image:url('http://i.imgur.com/EikJfFY.jpg');
           background-repeat:no-repeat;
           /*background-position: 300px;*/
+          background-attachment: fixed;
           background-origin: center;
           background-size: 1400px;
            height: 770px;
@@ -31,9 +32,10 @@
 
     <div class="container">
 
-      <form class="form-signin" role="form" action="{{ path('welcome') }}"  method="post">
+       <!--form class="form-signin" role="form" action="{{ path('welcome') }}"  method="post">-->
 
         <h2 class="form-signin-heading">Log In</h2>
+        <form id="reg_form" method="post" action="login">
         <input type="text" class="form-control" placeholder="Email address" required="" autofocus="">
         <input type="password" class="form-control" placeholder="Password" required=""><br>
         <button action = "{{ path('welcome') }}" class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
@@ -46,7 +48,7 @@
         <form id="reg_form" method="post" action="reg">
       
 
-        <input name="username" type="text" required class="form-control" placeholder="Username" autofocus>
+        <input name="username" type="text" required class="form-control" placeholder="username" autofocus>
    
         <input name="email" type="text" placeholder="Email address" required class="form-control" >
       
@@ -57,7 +59,9 @@
         <br><br>
       </form>
 
-    </div> <!-- /container -->
+    </div> 
+    
+    <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
