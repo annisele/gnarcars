@@ -72,8 +72,17 @@
               margin-left: 0;
             }
 
+            .icons{
+              margin-top: 26px;
+              height:40px;
+            }
 
-                       body {
+            #first-icon{
+              margin-left: 400px;
+            }
+
+
+          body {
           background-image:url('http://i.imgur.com/EikJfFY.jpg');
           background-repeat:no-repeat;
           /*background-position: 300px;*/
@@ -100,10 +109,13 @@
               <div class="navbar-header2">
          
                 <a class="navbar-brand" href="{{ path('welcome')}}"><b>GnarCar</b></a>
-              </div>
-                  
-                </form>
 
+              </div>
+
+<!-- ICONS NEXT TO THE NAME
+                <img class="icons" src="http://i.imgur.com/ScIpVcc.png" alt="">
+                <img class="icons" src="http://i.imgur.com/2BKbIZY.png" alt="">
+-->
                 <ul class="nav navbar-nav navbar-damn">
                     <!-- Log In button links to sign in page -->
                   <a href="{{ path('sign_in') }}"><button type="submit" class="btn btn-default btn-shift-left">Log In</button></a>
