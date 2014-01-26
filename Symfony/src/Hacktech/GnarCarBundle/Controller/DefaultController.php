@@ -31,6 +31,36 @@ class DefaultController extends Controller
     }
       public function logging_inAction()
     {
+        $user = new \uFlex(false);
+
+ $user->db['user'] = "root";
+    $user->db['pass'] = "";
+    $user->db['name'] = "all_users";
+        $user->start();
+        echo $_POST['username'];
+        //Proccess Login
+if(count($_POST)){
+    $username = isset($_POST['username']) ? $_POST['username'] : false;
+    $password = isset($_POST['password']) ? $_POST['password'] : false;
+    $auto = isset($_POST['auto']) ? $_POST['auto'] : false;
+
+    $user->login($username,$password,$auto);
+
+    $errMsg = '';
+
+    if($user->has_error()){
+        $errMsg = $user->error();
+        $errMsg = $errMsg[0];
+    }
+
+    echo json_encode(array(
+        'error'    => $user->error(),
+        'confirm'  => "You are now login as <b>$user->username</b>",
+        'form'     => $user->form_error(),
+    ));
+}
+
+
         return $this->render('HacktechGnarCarBundle:Default:index.html.twig', array());
     }
 
