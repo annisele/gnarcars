@@ -1,1 +1,70 @@
-Fill out form
+{% extends '::base.html.twig' %}
+{% block body %}
+<html lang="en">
+
+    <style type="text/css">
+
+        .container{
+            width:400px;
+        }
+
+        .form-signin-heading{
+          text-align: center;
+        }
+
+        .drive-or-ride{
+          width:400px;
+          text-align:center;
+        }
+
+        </style>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" role="form">
+        <h4 class="form-signin-heading">If you haven't already done so,<br>click to log in or create an account below</h4>
+        <h5 class="form-signin-heading">(You will be directed back to this page when you're done)</h5>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Log In/Create Account</button>
+      </form>
+
+      <form class="form-signin" role="form">
+        <h2 class="form-signin-heading">Join Event</h2>
+
+        <form action="" class="drive-or-ride">
+        <select name="drive/ride">
+        <option value="choose">I will be a [choose one]</option>
+        <option value="driver">Driver</option>
+        <option value="passenger">Passenger</option>
+        </select>
+        </form>
+
+
+        <!--
+        <div class="dropdown theme-dropdown clearfix">
+        <a id="dropdownMenu1" href="#" role="button" class="sr-only dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <li class="active" role="presentation"><a role="menuitem" tabindex="-1" href="#">I am a [choose one]</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Driver</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Passenger</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+      </div>
+
+-->
+
+
+<!--
+        <input type="text" class="form-control" placeholder="Username" required="" autofocus="">
+        <input type="text" class="form-control" placeholder="Email address" required="" autofocus="">
+        <input type="password" class="form-control" placeholder="Password" required=""><br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button> -->
+
+      </form>
+
+    </div>
+
+</body></html>
+{% endblock %}

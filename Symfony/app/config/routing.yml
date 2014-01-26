@@ -6,8 +6,8 @@ acme_hello:
     resource: "@AcmeHelloBundle/Resources/config/routing.yml"
     prefix:   /
 
-hello:
-    path:     /hello/{name}
+welcome:
+    path:     /welcome/
     defaults: { _controller: HacktechGnarCarBundle:Default:index }
 
 sign_in:

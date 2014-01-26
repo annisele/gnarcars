@@ -6,10 +6,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function indexAction()
     {
     	// this returns a view file found in our Resources/views
-        return $this->render('HacktechGnarCarBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('HacktechGnarCarBundle:Default:index.html.twig', array());
     }
 
     public function loginAction()
