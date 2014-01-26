@@ -18,11 +18,15 @@
             width:400px;
             background-color: lightgray;
             border-radius: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
 
         .form-signin-heading{
           text-align: center;
+        }
+
+        .btn{
+          margin-bottom: 40px;
         }
 
         </style>
@@ -38,7 +42,7 @@
         <form id="reg_form" method="post" action="login">
         <input type="text" class="form-control" placeholder="Email address" required="" autofocus="">
         <input type="password" class="form-control" placeholder="Password" required=""><br>
-        <button action = "{{ path('welcome') }}" class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
       </form>
 
     </div>
@@ -54,9 +58,9 @@
       
         <input name="password" type="password" placeholder="Password"  required class="form-control">
 
-
+        <br>
         <button action = "{{ path('welcome') }}" class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
-        <br><br>
+
       </form>
 
     </div> 

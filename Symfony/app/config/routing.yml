@@ -28,4 +28,4 @@ register:
 
 logging_in:
     path:     /sign_in/login
-    defaults: { _controller: HacktechGnarCarBundle:Default:loggin_in }
+    defaults: { _controller: HacktechGnarCarBundle:Default:logging_in }
