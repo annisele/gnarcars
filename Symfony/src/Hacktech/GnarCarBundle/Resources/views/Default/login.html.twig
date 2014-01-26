@@ -18,11 +18,15 @@
             width:400px;
             background-color: lightgray;
             border-radius: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
 
         .form-signin-heading{
           text-align: center;
+        }
+
+        .btn{
+          margin-bottom: 40px;
         }
 
         </style>
@@ -54,9 +58,13 @@
       
         <input name="password" type="password" placeholder="Password"  required class="form-control">
 
+        <br>
+       
 
-        <button action = "{{ path('welcome') }}" class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
+
+        <button  class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
         <br><br>
+
       </form>
 
     </div> 
