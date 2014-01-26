@@ -81,15 +81,22 @@
       		<b>Arcade Fire</b><br/>
       		<font size="2">11/12/13 The Echoplex</font>
       	</div>
-
-      	<div class="bandDetails">
-      		<br/>San Diego  -------->  Los Angeles
-      		<button action = "{{ path('join_car') }}" class="btn btn-lg btn-primary btn-block" type="submit">Join</button><br/>
-      		12 want to go  --------  4 open seats  
-      		 
-      		 <br/>
-      	</div>
+      	<form id = "some_form" method="post" action="{{ path('join_car') }}">
+	      	<div class="bandDetails">
+	      		<br/>San Diego  -------->  Los Angeles
+	      	
+	      		<button class="btn btn-lg btn-primary btn-block" action="{{ path('join_car') }}" type="submit"> Join 
+	      		</button>
+	      	
+	      		<br/>
+	      		12 want to go  --------  4 open seats  
+	      		 
+	      		 <br/>
+	      	</div>
+      	</form>
       </div>
+
+  
 
       <div class="card">
       	<div class="bandPic">
@@ -99,14 +106,16 @@
       		<b>Arcade Fire</b><br/>
       		<font size="2">11/14/13 The Metropolis Theater</font>
       	</div>
+      	<form id = "some_form" method="post" action="{{ path('join_car') }}">
 
-      	<div class="bandDetails">
-      		<br/>Santa Barbara  -------->  San Francisco
-      		<button action = "{{ path('join_car') }}" class="btn btn-lg btn-primary btn-block" type="submit">Join</button><br/>
-      		8 want to go  --------  0 open seats  
-      		 
-      		 <br/>
-      	</div>
+	      	<div class="bandDetails">
+	      		<br/>Santa Barbara  -------->  San Francisco
+	      		<button action = "{{ path('join_car') }}" class="btn btn-lg btn-primary btn-block" type="submit">Join</button><br/>
+	      		8 want to go  --------  0 open seats  
+	      		 
+	      		 <br/>
+	      	</div>
+	    </form>
       </div>
 
       <div class="card">
@@ -117,14 +126,15 @@
       		<b>Arcade Fire</b><br/>
       		<font size="2">11/15/14 The Echoplex</font>
       	</div>
-
-      	<div class="bandDetails">
-      		<br/>San Francisco  -------->  Seattle
-      		<button action = "{{ path('join_car') }}" class="btn btn-lg btn-primary btn-block" type="submit">Join</button><br/>
-      		2 want to go  --------  1 open seats  
-      		 
-      		 <br/>
-      	</div>
+		<form id = "some_form" method="post" action="{{ path('join_car') }}">
+	      	<div class="bandDetails">
+	      		<br/>San Francisco  -------->  Seattle
+	      		<button action = "{{ path('join_car') }}" class="btn btn-lg btn-primary btn-block" type="submit">Join</button><br/>
+	      		2 want to go  --------  1 open seats  
+	      		 
+	      		 <br/>
+	      	</div>
+	    </form>
       </div>
 
 </div> <!-- /container -->
