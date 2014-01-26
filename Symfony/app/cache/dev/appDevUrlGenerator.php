@@ -37,7 +37,7 @@ class appDevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
         'results' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::searchAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/results/',    ),  ),  4 =>   array (  ),),
         'join_car' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::formAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/join_car/',    ),  ),  4 =>   array (  ),),
         'register' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::registerAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/sign_in/reg',    ),  ),  4 =>   array (  ),),
-        'logging_in' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::loggin_inAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/sign_in/login',    ),  ),  4 =>   array (  ),),
+        'logging_in' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::logging_inAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/sign_in/login',    ),  ),  4 =>   array (  ),),
     );
 
     /**
