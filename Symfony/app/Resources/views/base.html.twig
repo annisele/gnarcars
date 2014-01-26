@@ -7,7 +7,7 @@
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
 
-		<!-- Latest compiled and minified JavaScript #0D9AD6; -->
+		<!-- Latest compiled and minified JavaScript -->
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
 
@@ -58,7 +58,6 @@
                 width:200px;
                 float: left;
                 margin-left: 20px;
-
             }
 
 
@@ -91,26 +90,25 @@
             {% endblock %}
 
 
-
+       
         <div id="sidebar">
             {% block sidebar %}
+   
+                 <input type="text" class="form-control" placeholder="Event Name" required="" autofocus="">
+              
+                 <input type="text" class="form-control" placeholder="Date (mm/dd/yyyy)" required="" autofocus="">
                 
-                     <input type="text" class="form-control" placeholder="Date (mm/dd/yyyy)" required="" autofocus="">
-                    
-                     <input type="text" class="form-control" placeholder="Event Name" required="" autofocus="">
-                    
-                     <input type="text" class="form-control" placeholder="City" required="" autofocus="">
+                 <input type="text" class="form-control" placeholder="City" required="" autofocus="">
 
-                     <input type="text" class="form-control" placeholder="State" required="" autofocus="">
-                    
-                     <input type="text" class="form-control" placeholder="User" required="" autofocus="">
-
-                     <button type="submit" class="btn btn-default search-btn">Search</button>
-
-
+                 <input type="text" class="form-control" placeholder="State" required="" autofocus="">
                 
+                 <input type="text" class="form-control" placeholder="User" required="" autofocus="">
+
+                 <button type="submit" class="btn btn-default search-btn">Search</button>
+  
             {% endblock %}
         </div>
+        
 
         <div id="content">
             {% block body %}{% endblock %}
