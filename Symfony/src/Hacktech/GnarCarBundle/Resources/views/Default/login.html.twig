@@ -8,7 +8,7 @@
           background-image:url('http://i.imgur.com/EikJfFY.jpg');
           background-repeat:no-repeat;
           /*background-position: 300px;*/
-          background-attachment: fixed;
+       
           background-origin: center;
           background-size: 1400px;
            height: 770px;
@@ -41,7 +41,7 @@
         <h2 class="form-signin-heading">Log In</h2>
         <form id="reg_form" method="post" action="login">
         <input name="username"  type="text" class="form-control" placeholder="Username" required="" autofocus="">
-        <input name="password" type="text" class="form-control" placeholder="Password" required=""><br>
+        <input name="password" type="password" class="form-control" placeholder="Password" required=""><br>
         <button action = "{{ path('welcome') }}" class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
       </form>
 

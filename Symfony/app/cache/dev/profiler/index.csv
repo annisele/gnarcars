@@ -289,3 +289,7 @@ aa05f4,::1,GET,http://localhost/gnarcars/Symfony/web/app_dev.php/sign_in/,139074
 cece81,::1,GET,http://localhost/gnarcars/Symfony/web/app_dev.php/hello/jenny,1390744875,
 687412,::1,GET,http://localhost/gnarcars/Symfony/web/app_dev.php/results/,1390744882,
 3b121d,::1,GET,http://localhost/gnarcars/Symfony/web/app_dev.php/results/,1390744930,
+ecd1de,::1,GET,http://localhost/gnarcars/Symfony/web/app_dev.php/results/,1390744980,
+22cbf8,::1,GET,http://localhost/gnarcars/Symfony/web/app_dev.php/sign_in/,1390744987,
+ec8342,::1,POST,http://localhost/gnarcars/Symfony/web/app_dev.php/sign_in/login,1390744999,
+9559bc,::1,GET,http://localhost/gnarcars/Symfony/web/app_dev.php/sign_in/,1390745080,
