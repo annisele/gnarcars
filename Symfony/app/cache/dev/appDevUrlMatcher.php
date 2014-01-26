@@ -136,7 +136,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         if (0 === strpos($pathinfo, '/hello')) {
             // hacktech_gnar_car_homepage
             if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'hacktech_gnar_car_homepage')), array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::indexAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'hacktech_gnar_car_homepage')), array (  '_controller' => 'HacktechGnarCarBundle:Default:index',));
             }
 
             // hello
@@ -152,7 +152,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->redirect($pathinfo.'/', 'welcome');
             }
 
-            return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::indexAction',  '_route' => 'welcome',);
+            return array (  '_controller' => 'HacktechGnarCarBundle:Default:index',  '_route' => 'welcome',);
         }
 
         // sign_in
