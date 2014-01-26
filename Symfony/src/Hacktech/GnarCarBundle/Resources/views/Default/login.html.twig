@@ -18,14 +18,14 @@
 
     <div class="container">
 
-      <form class="form-signin" role="form">
+      <form class="form-signin" role="form" action="{{ path('welcome') }}"  method="post">
         <h2 class="form-signin-heading">Log In</h2>
         <input type="text" class="form-control" placeholder="Email address" required="" autofocus="">
         <input type="password" class="form-control" placeholder="Password" required=""><br>
-        <a href="{{ path('welcome') }}"><button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button></a>
+        <button action = "{{ path('welcome') }}" class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
       </form>
 
-      <form class="form-signin" role="form">
+      <form class="form-signin" role="form" action="{{ path('welcome') }}"  method="post">
         <h4 class="form-signin-heading"><br><br>Or<br><br></h4>
         <h2 class="form-signin-heading">Create Account</h2>
         <input type="text" class="form-control" placeholder="Username" required="" autofocus="">
