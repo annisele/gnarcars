@@ -22,6 +22,10 @@ join_car:
     path:     /join_car/
     defaults: { _controller: HacktechGnarCarBundle:Default:form }
 
-join_car:
+register:
     path:     /sign_in/reg
     defaults: { _controller: HacktechGnarCarBundle:Default:register }
+
+logging_in:
+    path:     /sign_in/login
+    defaults: { _controller: HacktechGnarCarBundle:Default:logging_in }
