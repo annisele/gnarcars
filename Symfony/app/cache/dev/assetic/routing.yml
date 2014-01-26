@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: 'C:/Users/j/wamp/www/gnarcars/Symfony/app/config/routing_dev.yml'
+    resource: /Applications/MAMP/htdocs/gnarcars/Symfony/app/config/routing_dev.yml
