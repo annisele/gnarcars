@@ -190,7 +190,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             // logging_in
             if ($pathinfo === '/sign_in/login') {
-                return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::loggin_inAction',  '_route' => 'logging_in',);
+                return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::logging_inAction',  '_route' => 'logging_in',);
             }
 
         }

@@ -29,6 +29,11 @@ class DefaultController extends Controller
     {
     	return $this->render('HacktechGnarCarBundle:Default:form.html.twig', array());
     }
+      public function logging_inAction()
+    {
+        return $this->render('HacktechGnarCarBundle:Default:index.html.twig', array());
+    }
+
 
      public function registerAction()
     {    
