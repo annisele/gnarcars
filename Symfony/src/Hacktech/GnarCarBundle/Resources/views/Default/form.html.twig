@@ -6,15 +6,24 @@
 
         .container{
             width:400px;
+            background-color: lightgray;
+            border-radius: 12px;
+            margin-bottom: 20px;
         }
 
         .form-signin-heading{
           text-align: center;
+          color:#000000;
         }
 
-        .drive-or-ride{
-          width:400px;
+        .drive-and-ride{
+          width:370px;
           text-align:center;
+        }
+
+        .dropdown-menu{
+            width:370px;
+            text-align:center;
         }
 
         </style>
@@ -24,12 +33,12 @@
     <div class="container">
 
       <form class="form-signin" role="form" action="{{ path('sign_in') }}"  method="post">
-        <h4 class="form-signin-heading">If you haven't already done so,<br>click to log in or create an account below</h4>
-        <h5 class="form-signin-heading">(You will be directed back to this page when you're done)</h5>
-        <a href="{{ path('welcome') }}"><button class="btn btn-lg btn-primary btn-block" type="submit">Log In/Create Account</button></a>
+        <h4 class="form-signin-heading">Log in or create an account first!</h4>
+        <h5 class="form-signin-heading">(You'll be back here afterwards)</h5>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Log In/Create Account</button>
       
         <h2 class="form-signin-heading">Join Event</h2>
-
+<!--
         <form action="" class="drive-or-ride">
         <select name="drive/ride">
         <option value="choose">I will be a [choose one]</option>
@@ -37,22 +46,17 @@
         <option value="passenger">Passenger</option>
         </select>
       </form>
-
-
-        <!--
-        <div class="dropdown theme-dropdown clearfix">
-        <a id="dropdownMenu1" href="#" role="button" class="sr-only dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-          <li class="active" role="presentation"><a role="menuitem" tabindex="-1" href="#">I am a [choose one]</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Driver</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Passenger</a></li>
-          <li role="presentation" class="divider"></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-        </ul>
-      </div>
-
 -->
 
+            <ul class="nav drive-and-ride">
+            <li class="dropdown open">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">I will be a [choose one]<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Driver</a></li>
+                <li><a href="#">Passenger</a></li>
+              </ul>
+            </li>
+          </ul>
 
 <!--
         <input type="text" class="form-control" placeholder="Username" required="" autofocus="">
