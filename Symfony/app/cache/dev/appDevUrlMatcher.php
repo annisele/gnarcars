@@ -136,7 +136,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         if (0 === strpos($pathinfo, '/hello')) {
             // hacktech_gnar_car_homepage
             if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'hacktech_gnar_car_homepage')), array (  '_controller' => 'HacktechGnarCarBundle:Default:index',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'hacktech_gnar_car_homepage')), array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::indexAction',));
             }
 
             // hello
@@ -152,7 +152,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->redirect($pathinfo.'/', 'welcome');
             }
 
-            return array (  '_controller' => 'HacktechGnarCarBundle:Default:index',  '_route' => 'welcome',);
+            return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::indexAction',  '_route' => 'welcome',);
         }
 
         // sign_in
@@ -174,8 +174,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // join_car
+        if (rtrim($pathinfo, '/') === '/join_car') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'join_car');
+            }
+
+            return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::formAction',  '_route' => 'join_car',);
+        }
+
+        // register
         if ($pathinfo === '/sign_in/reg') {
-            return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::registerAction',  '_route' => 'join_car',);
+            return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::registerAction',  '_route' => 'register',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
