@@ -195,6 +195,15 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // confirmation
+        if (rtrim($pathinfo, '/') === '/confirmation') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'confirmation');
+            }
+
+            return array (  '_controller' => 'Hacktech\\GnarCarBundle\\Controller\\DefaultController::thank_youAction',  '_route' => 'confirmation',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }
