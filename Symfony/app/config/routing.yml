@@ -5,31 +5,3 @@ hacktech_gnar_car:
 acme_hello:
     resource: "@AcmeHelloBundle/Resources/config/routing.yml"
     prefix:   /
-
-welcome:
-    path:     /welcome/
-    defaults: { _controller: HacktechGnarCarBundle:Default:index }
-
-sign_in:
-    path:     /sign_in/
-    defaults: { _controller: HacktechGnarCarBundle:Default:login }
-
-results:
-    path:     /results/
-    defaults: { _controller: HacktechGnarCarBundle:Default:search }
-
-join_car:
-    path:     /join_car/
-    defaults: { _controller: HacktechGnarCarBundle:Default:form }
-
-register:
-    path:     /sign_in/reg
-    defaults: { _controller: HacktechGnarCarBundle:Default:register }
-
-logging_in:
-    path:     /sign_in/login
-    defaults: { _controller: HacktechGnarCarBundle:Default:logging_in }
-
-confirmation:
-    path:     /confirmation/
-    defaults: { _controller: HacktechGnarCarBundle:Default:thank_you}
